@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Menu</title>
+    <style>
+        
+        body {
+            height: 100vh;
+        }
+        
+        .one {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          width: 100%;
+          height: 8%;
+          background-color: whitesmoke;
+          box-shadow: 5px 5px 5px 1px lightslategray;
+        }
+
+        .two {
+            display: grid;
+            grid-template-columns: repeat(10, 10%);
+            grid-template-rows: repeat(12, 8%);
+            width: 100%;
+            height: 92%;       
+        }
+
+        .button0 {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 20px;
+            margin: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background: linear-gradient(90deg, rgb(96, 177, 96), green);
+            box-shadow: 1px 1px 5px 1px darkgreen;
+            color: white;
+            border: none;
+            border-radius: 5%;                 
+            
+        }
+
+        .button00 {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: 50%;
+            padding-left: 10px;
+            padding-right: 10px;
+            background: linear-gradient(90deg, rgb(96, 177, 96), green);
+            box-shadow: 1px 1px 5px 1px darkgreen;
+            color: white;
+            border: none;
+            border-radius: 5%;
+        }
+        
+        .button000 {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: 50%;
+            padding-left: 10px;
+            padding-right: 10px;
+            background: linear-gradient(90deg, rgb(109, 43, 16), red);
+            box-shadow: 1px 1px 5px 1px crimson;
+            color: white;
+            border: none;
+            border-radius: 5%;
+        }    
+
+        .button1 {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 20px;
+            margin: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border: 1px solid gray;
+            border-radius: 5%;
+        }
+
+        .button1a {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 1px 1px 5px 1px grey;
+            height: 30px;
+            width: 50%;
+            padding-left: 10px;
+            padding-right: 10px;
+            border: 1px solid gray;
+            border-radius: 5%;
+        }
+        
+        .button1b {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 1px 1px 5px 1px grey;
+            height: 30px;
+            width: 70%;
+            padding-left: 10px;
+            padding-right: 10px;
+            border: 1px solid grey;
+            border-radius: 5%;
+        }
+
+        .button1c {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 25px;
+            border: 1px solid gray;
+            border-radius: 5%;
+            padding: 0;
+            object-fit: fill;
+            margin-top: 10px;
+
+         }
+
+        .button2 {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 20px;
+             margin: 5px;
+            position: relative;
+            left: 65%;
+            border: 1px solid grey;
+            border-radius: 5%;
+        }
+
+        .checkmark {
+            height: 90%;
+            margin: 3px;
+        }
+
+        .checkmark2 {
+            height: 55%;
+            margin: 3px;
+        }
+
+        .checkmark3 {
+            height: 60%;
+         }
+
+        .showfooterlogo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            grid-column: 1/ 3;
+            grid-row: 2;
+        }
+        
+        .footerlogo {
+            grid-column: 3/ 4;
+            grid-row: 3;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .footer-width-menu {
+            grid-column: 3/ 5;
+            grid-row: 4;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+        }
+
+        .logo {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        
+        .logo2 {
+            grid-column: 1;
+            grid-row: 3;
+        }
+        
+        .show {
+            grid-column: 1;
+            grid-row: 5;
+        }
+
+        .showyear {
+            grid-column: 1;
+            grid-row: 6;
+        }
+
+        .privacy-policy {
+            grid-column: 1;
+            grid-row: 7;
+        }
+
+        .privacy-policy-item {
+            grid-column: 1;
+            grid-row: 8;
+        }
+
+        .privacy-policy-label {
+            grid-column: 1;
+            grid-row: 9;
+            height: 20px;
+        }
+
+        .terms-of-use {
+            grid-column: 1;
+            grid-row: 10;
+        }
+
+        .terms-of-use-item {
+            grid-column: 1;
+            grid-row: 11;
+        }
+
+        .terms-of-use-label {
+            grid-column: 1;
+            grid-row: 12;
+        }
+
+        .footer-width {
+            grid-column: 1;
+            grid-row: 4;
+        }
+
+        .hideshow {
+            grid-column: 3/ 4;
+            grid-row: 2;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .show2 {
+            grid-column: 3/ 4;
+            grid-row: 5;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .showyear2 {
+            grid-column: 3/ 4;
+            grid-row: 6;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .privacy-policy2 {
+            grid-column: 3/ 4;
+            grid-row: 7;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .privacy-policy-item2 {
+            grid-column: 3/ 5;
+            grid-row: 8;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .privacy-policy-label2 {
+            grid-column: 3/ 5;
+            grid-row: 9;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            height: 35px;
+        }
+
+        .terms-of-use2 {
+            grid-column: 3/ 4;
+            grid-row: 10;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+       
+        .terms-of-use-item2 {
+            grid-column: 3/ 4;
+            grid-row: 11;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .terms-of-use-label2 {
+            grid-column: 3/ 5;
+            grid-row: 12;
+            margin-top: 10px;
+            height: 25px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .full {
+            width: 190px;
+        }
+
+        h1 {
+            font-size: 18px;
+            grid-column: 1;
+            grid-row: 1;
+            margin-top: 20px;
+        }
+
+        form {
+            display: flex;
+
+        }
+
+        .dropbtn {
+            color: white;
+             padding: 2px;
+             font-size: 16px;
+             border: 2px solid gray;
+             text-align: center;
+             margin-top: 10px;
+             
+        }
+
+/* The container <div> - needed to position the dropdown content */
+        .dropdown {
+             position: relative;
+             display: inline-block;
+        }
+
+/* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+             display: none;
+             position: absolute;
+             background-color: #f1f1f1;
+             min-width: 160px;
+             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+             z-index: 1;
+             text-align: center;
+        }
+
+/* Links inside the dropdown */
+        .dropdown-content a {
+             color: black;
+             padding: 12px 16px;
+             text-decoration: none;
+             display: block;
+        }
+
+/* Change color of dropdown links on hover */
+        .dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {background-color: ghostwhite;}
+
+        @media (max-width: 680px) {
+        button {
+            font-size: 10px;
+        }
+        .two {
+                grid-template-columns: 50% 50%;
+        }
+        
+        .hideshow {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .footerlogo {
+            grid-column: 2;
+            grid-row: 3;
+        }
+
+        .footer-width-menu {
+            grid-column: 2;
+            grid-row: 4;
+        }
+
+        .show2 {
+            grid-column: 2;
+            grid-row: 5;
+         }
+
+        .showyear2 {
+            grid-column: 2;
+            grid-row: 6;
+        }
+
+        .privacy-policy2 {
+            grid-column: 2;
+            grid-row: 7;
+        }
+
+        .privacy-policy-item2 {
+            grid-column: 2;
+            grid-row: 8;
+        }
+        
+        .privacy-policy-label2 {
+            grid-column: 2;
+            grid-row: 9;
+
+        }
+
+        .terms-of-use2 {
+            grid-column: 2;
+            grid-row: 10;
+        }
+       
+        .terms-of-use-item2 {
+            grid-column: 2;
+            grid-row: 11;
+        }
+
+        .terms-of-use-label2 {
+            grid-column: 2;
+            grid-row: 12;
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="one">
+        <button type="button" class="button0"><img class="checkmark" src="./icons8-save-32.png">Save</button>
+        <button type="button" class="button1"><img class="checkmark" src="./check-mark.png"> Save & Close</button>
+        <button type="button" class="button1"><img class="checkmark" src="./duplicate.png">Save as copy</button>
+        <button type="button" class="button1"><img class="checkmark" src="./close.png">Close</button>
+        <button type="button" class="button2"><img class="checkmark" src="./question-mark.png">Help</button>
+    </div>
+    <div class="two">
+        <h1>Footer Settings</h1>
+        <p class="logo">Show Footer Logo</p>
+        <div class="show2">
+            <button type="button" class="button1a">Hide</button>
+            <button type="button" class="button00">Show</button>
+        </div>
+        <p class="logo2">Footer Logo</p>
+        <div class="footerlogo">
+            <button type="button" class="button1a"><img class="checkmark2" src="./eye.png" alt="eye"></button>
+            <button type="button" class="button1b">images/footer-logo</button>
+            <button type="button" class="button1a">Select</button>
+            <button type="button" class="button1a"><img class="checkmark2" src="./close 2.png" alt="close"></button>
+        </div>
+        <p class="footer-width">Footer Width</p>
+        <div class="dropdown footer-width-menu">
+            <form>
+            <input type="text" placeholder="3" class="dropbtn"><button type="button" class="button1c"><img class="checkmark3" src="./icons8-drop-down-40.png" alt="dropdown"></button></input>
+            <div class="dropdown-content">
+             <p>3</p>
+             <p>4</p>
+             <p>5</p>
+            </div>
+        </form>
+        </div>
+        <p class="show">Show©</p>
+        <div class="hideshow">
+            <button type="button" class="button1a">Hide</button>
+            <button type="button" class="button00">Show</button>
+        </div>
+        <p class="showyear">Show Year</p>
+        <div class="showyear2">
+            <button type="button" class="button1a">Hide</button>
+            <button type="button" class="button00">Show</button>
+        </div>
+        <p class="privacy-policy">Privacy Policy Link</p>
+        <div class="privacy-policy2">
+            <button type="button" class="button1a">Hide</button>
+            <button type="button" class="button00">Show</button>
+        </div>
+        <p class="privacy-policy-item">Privacy Policy Item</p>
+        <div class="dropdown privacy-policy-item2">
+            <form>
+            <input type="text" placeholder="Privacy Policy" class="dropbtn"><button type="button" class="button1c"><button type="button" class="button1c"><img class="checkmark3" src="./icons8-drop-down-40.png" alt="dropdown"></button></input>
+            <div class="dropdown-content">
+             <p>3</p>
+             <p>4</p>
+             <p>5</p>
+            </div>
+        </form>
+      </div>
+      <p class="privacy-policy-label">Privacy Policy Label</p>
+        <div class="privacy-policy-label2">
+          <form>
+            <input type="text" placeholder="Privacy Policy" class="dropbtn"></input>
+          </form>
+      </div>
+      <p class="terms-of-use">Terms of Use Link</p>
+        <div class="terms-of-use2">
+            <button type="button" class="button000">Hide</button>
+            <button type="button" class="button1a">Show</button>
+        </div>
+        <p class="terms-of-use-item">Terms of Use Item</p>
+        <div class="dropdown terms-of-use-item2">
+            <form>
+            <input type="text" placeholder="Forum" class="dropbtn"><button type="button" class="button1c"><button type="button" class="button1c"><img class="checkmark3" src="./icons8-drop-down-40.png" alt="dropdown"></button></input>
+            <div class="dropdown-content">
+             <p>3</p>
+             <p>4</p>
+             <p>5</p>
+            </div>
+        </form>
+      </div>
+      <p class="terms-of-use-label">Terms of Use Label</p>
+        <div class="terms-of-use-label2">
+          <form>
+            <input class="full" type="text" placeholder=""></input>
+          </form>
+      </div>
+    </div>
+</body>
+</html>
